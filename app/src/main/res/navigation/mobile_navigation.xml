@@ -11,27 +11,53 @@
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_upcoming_stream" >
         <action
-            android:id="@+id/action_nav_home_to_upcomingStreamDetailFragment"
-            app:destination="@id/upcomingStreamDetailFragment" />
+            android:id="@+id/action_nav_home_to_nav_upcoming_detail"
+            app:destination="@id/nav_upcoming_detail" />
     </fragment>
 
     <fragment
-        android:id="@+id/nav_characters"
-        android:name="com.uas.hololiveviewer.ui.characters.CharactersFragment"
+        android:id="@+id/nav_channels"
+        android:name="com.uas.hololiveviewer.ui.channel.ChannelFragment"
         android:label="@string/menu_characters"
-        tools:layout="@layout/fragment_characters" />
+        tools:layout="@layout/fragment_channel" >
+        <action
+            android:id="@+id/action_nav_channels_to_channelDetailFragment"
+            app:destination="@id/channelDetailFragment" />
+    </fragment>
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.uas.hololiveviewer.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
-    <fragment
-        android:id="@+id/upcomingStreamDetailFragment"
+        android:id="@+id/nav_upcoming_detail"
         android:name="com.uas.hololiveviewer.ui.live.UpcomingStreamDetailFragment"
         android:label="UpcomingStreamDetailFragment" >
         <action
-            android:id="@+id/action_upcomingStreamDetailFragment_to_nav_home"
+            android:id="@+id/action_nav_upcoming_detail_to_nav_home"
             app:destination="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/channelDetailFragment"
+        android:name="com.uas.hololiveviewer.ui.channel.ChannelDetailFragment"
+        android:label="fragment_channel_detail"
+        tools:layout="@layout/fragment_channel_detail" >
+        <action
+            android:id="@+id/action_channelDetailFragment_to_nav_channels"
+            app:destination="@id/nav_channels" />
+    </fragment>
+    <fragment
+        android:id="@+id/videoFragment"
+        android:name="com.uas.hololiveviewer.ui.video.VideoFragment"
+        android:label="fragment_video"
+        tools:layout="@layout/fragment_video" >
+        <action
+            android:id="@+id/action_videoFragment_to_videoDetailFragment"
+            app:destination="@id/videoDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/videoDetailFragment"
+        android:name="com.uas.hololiveviewer.ui.video.VideoDetailFragment"
+        android:label="fragment_video_detail"
+        tools:layout="@layout/fragment_video_detail" >
+        <action
+            android:id="@+id/action_videoDetailFragment_to_videoFragment"
+            app:destination="@id/videoFragment" />
     </fragment>
 </navigation>

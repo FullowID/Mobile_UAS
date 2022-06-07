@@ -1,7 +1,9 @@
 package com.uas.hololiveviewer.data.video
 
+import com.squareup.moshi.Json
+
 data class DataVideo(
-    val count: Int,
-    val total: Int,
-    val videos: List<Video>
+
+	@Json(name="videos")
+	val videos: List<VideosItem>? = null
 )

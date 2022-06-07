@@ -6,15 +6,35 @@ import androidx.core.net.toUri
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
+import com.uas.hololiveviewer.data.channel.ChannelsItem
 import com.uas.hololiveviewer.data.live.Upcoming
-import com.uas.hololiveviewer.ui.live.HololiveApiStatus
+import com.uas.hololiveviewer.data.video.VideosItem
+import com.uas.hololiveviewer.ui.channel.ChannelAdapter
+import com.uas.hololiveviewer.ui.channel.ChannelApiStatus
+import com.uas.hololiveviewer.ui.live.UpcomingApiStatus
 import com.uas.hololiveviewer.ui.live.UpcomingStreamAdapter
+import com.uas.hololiveviewer.ui.video.VideoAdapter
+import com.uas.hololiveviewer.ui.video.VideoApiStatus
 
 @BindingAdapter("listUpcoming")
-fun bindRecyclerView(recyclerView: RecyclerView, data: List<Upcoming>?) {
+fun binRVUpcoming(recyclerView: RecyclerView, data: List<Upcoming>?) {
     val adapter = recyclerView.adapter as UpcomingStreamAdapter
     adapter.submitList(data)
 }
+
+@BindingAdapter("listVideo")
+fun bindRVVideo(recyclerView: RecyclerView, data: List<VideosItem>?) {
+    val adapter = recyclerView.adapter as VideoAdapter
+    adapter.submitList(data)
+}
+
+@BindingAdapter("listChannel")
+fun bindRVChannel(recyclerView: RecyclerView, data: List<ChannelsItem>?) {
+    val adapter = recyclerView.adapter as ChannelAdapter
+    adapter.submitList(data)
+}
+
+
 
 @BindingAdapter("imageUrl")
 fun bindImage(imgView: ImageView, imgUrl: String?) {
@@ -27,18 +47,52 @@ fun bindImage(imgView: ImageView, imgUrl: String?) {
     }
 }
 
-@BindingAdapter("hololiveApiStatus")
-fun bindStatus(statusImageView: ImageView, status: HololiveApiStatus?) {
+@BindingAdapter("channelApiStatus")
+fun bindStatus(statusImageView: ImageView, status: ChannelApiStatus?) {
     when (status) {
-        HololiveApiStatus.LOADING -> {
+        ChannelApiStatus.LOADING -> {
             statusImageView.visibility = View.VISIBLE
             statusImageView.setImageResource(R.drawable.loading_animation)
         }
-        HololiveApiStatus.ERROR -> {
+        ChannelApiStatus.ERROR -> {
             statusImageView.visibility = View.VISIBLE
             statusImageView.setImageResource(R.drawable.ic_connection_error)
         }
-        HololiveApiStatus.DONE -> {
+        ChannelApiStatus.DONE -> {
+            statusImageView.visibility = View.GONE
+        }
+    }
+}
+
+@BindingAdapter("upcomingApiStatus")
+fun bindUpcomingStatus(statusImageView: ImageView, status: UpcomingApiStatus?) {
+    when (status) {
+        UpcomingApiStatus.LOADING -> {
+            statusImageView.visibility = View.VISIBLE
+            statusImageView.setImageResource(R.drawable.loading_animation)
+        }
+        UpcomingApiStatus.ERROR -> {
+            statusImageView.visibility = View.VISIBLE
+            statusImageView.setImageResource(R.drawable.ic_connection_error)
+        }
+        UpcomingApiStatus.DONE -> {
+            statusImageView.visibility = View.GONE
+        }
+    }
+}
+
+@BindingAdapter("videoApiStatus")
+fun bindVideoStatus(statusImageView: ImageView, status: VideoApiStatus?) {
+    when (status) {
+        VideoApiStatus.LOADING -> {
+            statusImageView.visibility = View.VISIBLE
+            statusImageView.setImageResource(R.drawable.loading_animation)
+        }
+        VideoApiStatus.ERROR -> {
+            statusImageView.visibility = View.VISIBLE
+            statusImageView.setImageResource(R.drawable.ic_connection_error)
+        }
+        VideoApiStatus.DONE -> {
             statusImageView.visibility = View.GONE
         }
     }

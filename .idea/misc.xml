@@ -10,14 +10,26 @@
         <entry key="..\:/Arin/Project/AndroidStudio/GenshinImpact/app/src/main/res/layout/fragment_slideshow.xml" value="0.1634963768115942" />
         <entry key="..\:/Arin/Project/AndroidStudio/GenshinImpact/app/src/main/res/layout/nav_header_main.xml" value="0.1634963768115942" />
         <entry key="..\:/Arin/Project/AndroidStudio/GenshinImpact/app/src/main/res/menu/activity_main_drawer.xml" value="0.20416666666666666" />
+        <entry key="..\:/Arin/Project/AndroidStudio/HololiveViewer/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Arin/Project/AndroidStudio/HololiveViewer/app/src/main/res/layout/app_bar_main.xml" value="0.1" />
+        <entry key="..\:/Arin/Project/AndroidStudio/HololiveViewer/app/src/main/res/layout/channel_item.xml" value="0.22" />
         <entry key="..\:/Arin/Project/AndroidStudio/HololiveViewer/app/src/main/res/layout/content_main.xml" value="0.2" />
+        <entry key="..\:/Arin/Project/AndroidStudio/HololiveViewer/app/src/main/res/layout/fragment_add_memo.xml" value="0.22" />
+        <entry key="..\:/Arin/Project/AndroidStudio/HololiveViewer/app/src/main/res/layout/fragment_channel.xml" value="0.1" />
+        <entry key="..\:/Arin/Project/AndroidStudio/HololiveViewer/app/src/main/res/layout/fragment_channel_detail.xml" value="0.1" />
+        <entry key="..\:/Arin/Project/AndroidStudio/HololiveViewer/app/src/main/res/layout/fragment_channels.xml" value="0.1" />
         <entry key="..\:/Arin/Project/AndroidStudio/HololiveViewer/app/src/main/res/layout/fragment_characters.xml" value="0.1" />
         <entry key="..\:/Arin/Project/AndroidStudio/HololiveViewer/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/Arin/Project/AndroidStudio/HololiveViewer/app/src/main/res/layout/fragment_memo_list.xml" value="0.33" />
         <entry key="..\:/Arin/Project/AndroidStudio/HololiveViewer/app/src/main/res/layout/fragment_slideshow.xml" value="0.1" />
         <entry key="..\:/Arin/Project/AndroidStudio/HololiveViewer/app/src/main/res/layout/fragment_upcoming_detail.xml" value="0.14" />
         <entry key="..\:/Arin/Project/AndroidStudio/HololiveViewer/app/src/main/res/layout/fragment_upcoming_stream.xml" value="0.1" />
+        <entry key="..\:/Arin/Project/AndroidStudio/HololiveViewer/app/src/main/res/layout/fragment_video.xml" value="0.10778985507246377" />
+        <entry key="..\:/Arin/Project/AndroidStudio/HololiveViewer/app/src/main/res/layout/fragment_video_detail.xml" value="0.10778985507246377" />
         <entry key="..\:/Arin/Project/AndroidStudio/HololiveViewer/app/src/main/res/layout/nav_header_main.xml" value="0.10914855072463768" />
         <entry key="..\:/Arin/Project/AndroidStudio/HololiveViewer/app/src/main/res/layout/upcoming_stream_item.xml" value="0.20699708454810495" />
+        <entry key="..\:/Arin/Project/AndroidStudio/HololiveViewer/app/src/main/res/layout/video_item.xml" value="0.1" />
+        <entry key="..\:/Arin/Project/AndroidStudio/HololiveViewer/app/src/main/res/menu/activity_main_drawer.xml" value="0.20416666666666666" />
       </map>
     </option>
   </component>

@@ -1,14 +1,8 @@
-package com.uas.hololiveviewer.data.channel
+package com.uas.hololiveviewer.data.video
 
 import com.squareup.moshi.Json
 
-data class DataChannel(
-
-	@Json(name="channels")
-	val channels: List<ChannelsItem?>? = null
-)
-
-data class ChannelsItem(
+data class Channel(
 
 	@Json(name="twitter_link")
 	val twitterLink: String? = null,
@@ -29,5 +23,17 @@ data class ChannelsItem(
 	val photo: String? = null,
 
 	@Json(name="id")
-	val id: Int? = null
+	val id: Int? = null,
+
+	@Json(name="bb_space_id")
+	val bbSpaceId: Any? = null,
+
+	@Json(name="published_at")
+	val publishedAt: String? = null,
+
+	@Json(name="yt_channel_id")
+	val ytChannelId: String? = null,
+
+	@Json(name="view_count")
+	val viewCount: Int? = null
 )

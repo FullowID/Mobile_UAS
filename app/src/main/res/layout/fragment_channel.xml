@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="viewModel"
-            type="com.uas.hololiveviewer.ui.live.UpcomingStreamViewModel" />
+            type="com.uas.hololiveviewer.ui.channel.ChannelViewModel" />
     </data>
 
     <RelativeLayout
@@ -14,20 +15,20 @@
         android:layout_height="wrap_content">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvUpcoming"
+            android:id="@+id/rvChannel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="8dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:listUpcoming="@{viewModel.hololiveUpcomings}"
-            tools:listitem="@layout/upcoming_stream_item"/>
-
+            app:listChannel="@{viewModel.hololiveChannels}"
+            tools:listitem="@layout/upcoming_stream_item"
+            />
         <ImageView
             android:id="@+id/status_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/status_image"
-            app:upcomingApiStatus="@{viewModel.status}"
+            app:channelApiStatus="@{viewModel.status}"
             tools:src="@tools:sample/backgrounds/scenic"/>
 
     </RelativeLayout>
